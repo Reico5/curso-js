@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JSON</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./estilos.css" />
+  </head>
+
+  <body>
+    <h1 id="title_head">Bienvenido al LocalStorage de peliculas</h1>
+    <div style="display: flex; align-items: flex-start">
+      <div id="form_register" class="box">
+        <h3>Registro</h3>
+        <form action="#" method="post" onsubmit="return false">
+          <label for="user_register">Usuario:</label><br />
+          <input id="user_register" name="user_register" type="text" />
+          <span class="warning" id="user_warning">Usuario No Valido</span><br />
+          <label for="psw_register">Contraseña:</label><br />
+          <input id="psw_register" name="psw_register" type="text" /><span class="warning" id="psw_warning">Contraseña No Valida</span><br /><br />
+          <button type="submit">Registrarse</button>
+        </form>
+      </div>
+      <div id="form_sign_up" class="box">
+        <h3>Inciar Sesion</h3>
+        <form action="#" method="post" onsubmit="return false">
+          <label for="user_sign_up">Usuario:</label><br />
+          <input id="user_sign_up" name="user_sign_up" type="text" /><span class="warning" id="user_warning">Usuario No Valido</span><br />
+          <label for="psw_sign_up">Contraseña:</label><br />
+          <input id="psw_sign_up" name="psw_sign_up" type="text" /><span class="warning" id="psw_warning">Contraseña No Valida</span><br /><br />
+          <button type="submit">Iniciar Sesion</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="movies_table" id="movies_table">
+      <h2 id="table_title"></h2>
+      <ol id="listMovies"></ol>
+      <div style="display: flex; align-items: center; gap: 1rem">
+        <button type="button" id="addMovie">Agregar Pelicula</button>
+        <button type="button" id="deleteMovie">Borrar Pelicula</button>
+      </div>
+    </div>
+    <script src="JSON/LocalStorage.js"></script>
+  </body>
+</html>
